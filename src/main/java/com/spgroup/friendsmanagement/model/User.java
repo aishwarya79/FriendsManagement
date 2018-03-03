@@ -18,28 +18,27 @@ import javax.persistence.Table;
 @Table(name = "USERS")
 public class User implements Serializable {
 
-
 	private static final long serialVersionUID = -3049541794733737309L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
-	
+
 	@Column(name = "email_addr")
 	private String email;
 
-	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
 	@JoinTable(name = "FRIENDSHIP", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "friend_id") })
 	private Set<User> friendsList;
-	
-	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+
+	@ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
 	@JoinTable(name = "SUBSCRIBERS", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "subscriber_id") })
 	private Set<User> subscribers;
-	
-	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+
+	@ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
 	@JoinTable(name = "BLOCKED_USERS", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "blocked_id") })
 	private Set<User> blockedList;
@@ -79,7 +78,6 @@ public class User implements Serializable {
 	public void setBlockedList(Set<User> blockedList) {
 		this.blockedList = blockedList;
 	}
-
 
 	@Override
 	public int hashCode() {

@@ -1,0 +1,17 @@
+insert into spgroup.users (email_addr) VALUES ('harry.potter@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('ron.weasley@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('ginny.weasley@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('hermoine.granger@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('fred.weasley@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('george.wealey@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('sirius.black@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('james.potter@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('remus.lupin@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('lily.potter@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('andy@example.com');
+insert into spgroup.users (email_addr) VALUES ('john@example.com');
+insert into spgroup.users (email_addr) VALUES ('lisa@example.com');
+insert into spgroup.users (email_addr) VALUES ('kate@example.com');
+insert into spgroup.users (email_addr) VALUES ('lucius.malfoy@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('draco.malfoy@yahoo.com');
+insert into spgroup.users (email_addr) VALUES ('peter.pettigrew@example.com');
