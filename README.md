@@ -51,7 +51,7 @@ Please refer to the [Postman Collection](https://raw.githubusercontent.com/aishw
 
 ### Running the Application
 **Cloud Deployment:** Friends Management App is already deployed on AWS cloud on a Linux instance.  
-*_Host: ec2-18-219-235-77.us-east-2.compute.amazonaws.com_*
+- Host: *ec2-18-219-235-77.us-east-2.compute.amazonaws.com*
 - The web application is running on port 8080 which is open for public.
 - The postgres server is running on port 5432 which is open for public.
 
@@ -77,3 +77,4 @@ To run the application on your local linux/mac machine , follow the below steps 
 	
 ### Test Coverage
 Test Coverage achieved was 90.2%.
+![Test Coverage](https://github.com/aishwarya79/FriendsManagement/blob/master/TestCoverage.png)
