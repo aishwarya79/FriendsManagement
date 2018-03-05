@@ -29,11 +29,11 @@ Has a foreign key relationship with *USERS* table
 Stores the requestor and blocked user ids
 Has a foreign key relationship with *USERS* table
 
-Please refer to the [DDL Scripts](https://github.com/aishwarya79/FriendsManagement/blob/master/database/friendsmanagement.sql) for detailed schema
+Please refer to the [DDL Scripts](https://github.com/aishwarya79/FriendsManagement/blob/master/database/friendsmanagement.sql) for detailed schema.
 
 ### API Documentation
 
-Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
+Detailed API documentation is available at [API Documentation](https://raw.githubusercontent.com/aishwarya79/FriendsManagement/master/api_docuentation.md).
 
 Use Case | Http Method | API |
 | ------ | ------ | ------ | 
@@ -44,11 +44,10 @@ Use Case | Http Method | API |
 | Block a User | POST | [/friendsmanagement/api/v1/users/block] |
 | Get all Recipients of an update | POST | [/friendsmanagement/api/v1/notification/recipients]|
 
-Please refer to the Postman Collection (_FriendsMgmt.postman_collection.json file_) for Request and Response samples.
+Please refer to the [Postman Collection](https://raw.githubusercontent.com/aishwarya79/FriendsManagement/master/FriendsMgmt.postman_collection.json) for Request and Response samples.
 
 ### Running the Application
-Friends Management App is already deployed on AWS cloud on a Linux instance. 
-You can use the postman collection provided to test the app.
+Friends Management App is already deployed on AWS cloud on a Linux instance. Import the Postman Collection provided to test the app.
 
 To run the application on your local linux/mac machine , follow the below steps : 
 1. Clone the repo from Github to your local machine. Navigate to application root folder.
@@ -59,7 +58,7 @@ To run the application on your local linux/mac machine , follow the below steps 
 	```
 3. Update the postgres host in src/main/resources/application.properties. You can use the postgres database deployed on the aws instance. 
    Replace _localhost_ with _ec2-18-219-235-77.us-east-2.compute.amazonaws.com_
-   spring.datasource.url=jdbc:postgresql://localhost:5432/postgres?currentSchema=spgroup
+   *spring.datasource.url*=jdbc:postgresql://localhost:5432/postgres?currentSchema=spgroup
 
 4. Run the application by running the following script:
 	```

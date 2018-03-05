@@ -8,26 +8,6 @@
 	},
 	"item": [
 		{
-			"name": "Freind List",
-			"request": {
-				"url": "ec2-18-219-235-77.us-east-2.compute.amazonaws.com:8080/friendsmanagement/api/v1/friends/list",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"email\" : \"ginny.weasley@yahoo.com\"\n}"
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
 			"name": "Connect Freinds",
 			"request": {
 				"url": "ec2-18-219-235-77.us-east-2.compute.amazonaws.com:8080/friendsmanagement/api/v1/friends/connect",
@@ -41,7 +21,27 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"friends\":\r\n    [\r\n        \"sirius.black@yahoo.com\",\r\n        \"james.black@yahoo.com\"\r\n    ]\r\n}"
+					"raw": "{\r\n  \"friends\":\r\n    [\r\n        \"harry.potter@yahoo.com\",\r\n        \"ron.weasley@yahoo.com\"\r\n    ]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Freind List",
+			"request": {
+				"url": "ec2-18-219-235-77.us-east-2.compute.amazonaws.com:8080/friendsmanagement/api/v1/friends/list",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\" : \"harry.potter@yahoo.com\"\r\n}"
 				},
 				"description": ""
 			},
@@ -61,7 +61,27 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"friends\":\r\n    [\r\n        \"ginny.weasley@yahoo.com\",\r\n        \"harry.potter@yahoo.com\"\r\n    ]\r\n}"
+					"raw": "{\r\n  \"friends\":\r\n    [\r\n        \"hermoine.granger@yahoo.com\",\r\n        \"harry.potter@yahoo.com\"\r\n    ]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe User",
+			"request": {
+				"url": "ec2-18-219-235-77.us-east-2.compute.amazonaws.com:8080/friendsmanagement/api/v1/users/subscribe",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestor\" : \"james.potter@yahoo.com\",\r\n    \"target\": \"harry.potter@yahoo.com\"\r\n    \r\n}"
 				},
 				"description": ""
 			},
@@ -82,26 +102,6 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n  \r\n    \"requestor\" : \"draco.malfoy@yahoo.com\",\r\n    \"target\": \"harry.potter@yahoo.com\"\r\n    \r\n}"
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "Subscribe User",
-			"request": {
-				"url": "ec2-18-219-235-77.us-east-2.compute.amazonaws.com:8080/friendsmanagement/api/v1/users/subscribe",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \r\n    \"requestor\" : \"james.potter@yahoo.com\",\r\n    \"target\": \"harry.potter@yahoo.com\"\r\n    \r\n}"
 				},
 				"description": ""
 			},
