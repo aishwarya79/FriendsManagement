@@ -1,10 +1,13 @@
 # Friends Management
 
-Friends Management application is a simple social networking platform that allows varios users to interact with each other. Currently the application supports the following features :
+Friends Management application is a simple social networking platform that allows various users to interact with each other. Currently the application supports the following features :
 
   - Add Friends
+  - List Friends
+  - List Mutual Friends
   - Subscribe to another user's updates
   - Block a user
+  - Find the Recipients of a user's updates
 
 # Technical Design
 
@@ -17,23 +20,23 @@ Friends Management is a Spring Boot Application that uses Spring JPA for persist
 
 #### Database 
 The application uses a **_Postgres_** Database to stores all the registered users and their relationships. Below tables are used by the application :
-- **USERS** 
-Stores all the users' details  of Friends Management app, user id being the unique idetifier
-- **FRIENDSHIP**
-Stores the ids of users who are added as friends
+- **USERS**  
+Stores all the users' details  of Friends Management app, user id being the unique identifier
+- **FRIENDSHIP**  
+Stores the ids of users who are added as friends.
 Has a foreign key relationship with *USERS* table
-- **SUBSCRIPTION**
-Stores the subscriber and subscribed user ids 
+- **SUBSCRIPTION**  
+Stores the subscriber and subscribed user ids. 
 Has a foreign key relationship with *USERS* table
-- **BLOCKED_USERS**
-Stores the requestor and blocked user ids
+- **BLOCKED_USERS**  
+Stores the requestor and blocked user ids. 
 Has a foreign key relationship with *USERS* table
 
 Please refer to the [DDL Scripts](https://github.com/aishwarya79/FriendsManagement/blob/master/database/friendsmanagement.sql) for detailed schema.
 
 ### API Documentation
 
-Detailed API documentation is available at [API Documentation](https://raw.githubusercontent.com/aishwarya79/FriendsManagement/master/api_docuentation.md).
+Detailed API documentation is available at [API Documentation](https://github.com/aishwarya79/FriendsManagement/blob/master/api_documentation.md).
 
 Use Case | Http Method | API |
 | ------ | ------ | ------ | 
@@ -44,11 +47,18 @@ Use Case | Http Method | API |
 | Block a User | POST | [/friendsmanagement/api/v1/users/block] |
 | Get all Recipients of an update | POST | [/friendsmanagement/api/v1/notification/recipients]|
 
-Please refer to the [Postman Collection](https://raw.githubusercontent.com/aishwarya79/FriendsManagement/master/FriendsMgmt.postman_collection.json) for Request and Response samples.
+Please refer to the [Postman Collection](https://raw.githubusercontent.com/aishwarya79/FriendsManagement/master/FriendsMgmt.postman_collection.json) for Request and Response samples. Import the postman collection into your postman and start making API calls.
 
 ### Running the Application
-Friends Management App is already deployed on AWS cloud on a Linux instance. Import the Postman Collection provided to test the app.
+**Cloud Deployment:** Friends Management App is already deployed on AWS cloud on a Linux instance.  
+*_Host: ec2-18-219-235-77.us-east-2.compute.amazonaws.com_*
+- The web application is running on port 8080 which is open for public.
+- The postgres server is running on port 5432 which is open for public.
 
+ 
+ Import the Postman Collection provided to test the app.
+
+**Running Locally:**
 To run the application on your local linux/mac machine , follow the below steps : 
 1. Clone the repo from Github to your local machine. Navigate to application root folder.
 
@@ -64,3 +74,6 @@ To run the application on your local linux/mac machine , follow the below steps 
 	```
 	sh run.sh 
 	```
+	
+### Test Coverage
+Test Coverage achieved was 90.2%.
