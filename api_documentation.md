@@ -1,4 +1,4 @@
-**API 1: Adds friend connection**
+**API 1: Adds friend connection**  
 Method: POST  
 URL: /friendsmanagement/api/v1/friends/connect  
 Accepts: application/json
@@ -19,7 +19,7 @@ Sample Request:
 }
 ```
 
-**API 2: Get friends list of a user**
+**API 2: Get friends list of a user**   
 Method: POST  
 URL: /friendsmanagement/api/v1/friends/list 
 Accepts: application/json
@@ -40,7 +40,7 @@ Sample Response:
 }
 ```
 
-**API 3: Find Common friends of two users**
+**API 3: Find Common friends of two users**  
 Method: POST  
 URL:  /friendsmanagement/api/v1/friends/common 
 Accepts: application/json
@@ -65,7 +65,7 @@ Sample Request:
 }
 ```
 
-**API 4: Subscribe to another user**
+**API 4: Subscribe to another user**  
 Method: POST  
 URL: /friendsmanagement/api/v1/users/subscribe 
 Accepts: application/json
@@ -83,7 +83,7 @@ Sample Response:
 }
 ```
 
-**API 5: Block a user**
+**API 5: Block a user**  
 Method: POST  
 URL:  /friendsmanagement/api/v1/users/block 
 Accepts: application/json
@@ -101,7 +101,7 @@ Sample Response:
 }
 ```
 
-**API 6: Get Recipients of a user's update**
+**API 6: Get Recipients of a user's update**  
 Method: POST  
 URL: /friendsmanagement/api/v1/notification/recipients  
 Accepts: application/json
